@@ -1,0 +1,31 @@
+*{
+    border : 1px solid black
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.ribbon {
+
+    justify-content: center;
+}
+
+.area{
+
+    width: 960px;
+    height: auto;  
+    
+}
+
+.hori{
+
+    justify-content:space-between;
+}
