@@ -1,6 +1,8 @@
 const button = document.querySelector("#prompt");
 let num = 20; //number of boxes in grid
 let w = 800/num; //calculate width of box
+const root = document.querySelector(':root');
+
 
 // creats horizontal boxes to accomodate the main boxes
 const hori = document.createElement('div'); 
