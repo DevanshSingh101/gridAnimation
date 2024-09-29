@@ -16,7 +16,7 @@ box.setAttribute('style', 'height:' + w + ';width:'+ w + ';');
 
 
 
-for(let i = 0; i <=num; i++) {
+for(let i = 1; i <=num; i++) {
     const hori = document.createElement('div'); 
     hori.className  = 'hori';
     area.appendChild(hori);
