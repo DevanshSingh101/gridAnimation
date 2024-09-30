@@ -1,7 +1,6 @@
 const button = document.querySelector("#prompt");
 let num = 20; //number of boxes in grid
-let w_init = 800/num; //calculate width of box
-let w_old = w_init;
+let w = 800/num; //calculate width of box
 const root = document.querySelector(':root');
 
 
