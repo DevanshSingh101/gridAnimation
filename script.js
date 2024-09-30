@@ -1,6 +1,7 @@
 const button = document.querySelector("#prompt");
 let num = 20; //number of boxes in grid
-let w = 800/num; //calculate width of box
+let w_init = 800/num; //calculate width of box
+let w_old = w_init;
 const root = document.querySelector(':root');
 
 
@@ -16,12 +17,13 @@ createGrid();
 
 button.onclick = function getWidth(){
     num = prompt("Type the size");
-    w = 800/num;    
+       
+    let w_old = w;
     createGrid();
 }
 
 
-function createGrid(){
+function createGrid(w){
 
 // box.setAttribute('style', 'height:' + w + ';width:'+ w + ';');
 
