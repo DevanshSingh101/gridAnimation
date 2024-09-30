@@ -15,18 +15,26 @@ const area = document.querySelector('.area');
 createGrid();
 
 button.onclick = function getWidth(){
+    ex_num = num;
     num = prompt("Type the size");
+    deleteGrid(ex_num);
     w = 800/num;    
     createGrid();
 }
 
-
+function deleteGrid(num_old){
+    //delete the children of area
+    //select area
+    //delete hori
+    for(let i = 1; i<=num_old; i++){
+        let hori_ = document.querySelector('.hori');
+        area.removeChild(hori_);
+    }
+}
 function createGrid(){
 
 // box.setAttribute('style', 'height:' + w + ';width:'+ w + ';');
 
-console.log(w);
-console.log(num);
 
 for(let i = 1; i <=num; i++) {
     const hori = document.createElement('div'); 
