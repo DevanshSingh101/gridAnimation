@@ -8,8 +8,8 @@ const root = document.querySelector(':root');
 const hori = document.createElement('div'); 
 hori.className  = 'hori';
 
-const box = document.createElement('div');
-box.className = 'box';
+
+
 const area = document.querySelector('.area');
 
 createGrid();
@@ -20,7 +20,13 @@ button.onclick = function getWidth(){
     deleteGrid(ex_num);
     w = 800/num;    
     createGrid();
+    
 }
+
+//  grid = document.querySelector('.box');
+
+
+
 
 function deleteGrid(num_old){
     //delete the children of area
@@ -33,7 +39,6 @@ function deleteGrid(num_old){
 }
 function createGrid(){
 
-// box.setAttribute('style', 'height:' + w + ';width:'+ w + ';');
 
 
 for(let i = 1; i <=num; i++) {
@@ -44,7 +49,22 @@ for(let i = 1; i <=num; i++) {
         const box = document.createElement('div');
         box.className = 'box';
         box.setAttribute('style', 'height:' + w + 'px' + ';width:'+ w + 'px' + ';');
+        fill();
         hori.appendChild(box);
     }
 }
+
+
+// fill();  
+}
+
+
+function fill()
+{
+boxNode = document.querySelectorAll('.box');
+boxNode.forEach(function (item){
+    item.onmouseover = function(){
+        item.setAttribute('style', 'background-color:black;');
+}
+});
 }
